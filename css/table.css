@@ -1,0 +1,61 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.table {
+    width: 100%;
+    display: table;
+}
+
+.table .head {
+    display: table-header-group;
+}
+
+.table .body {
+    display: table-row-group;
+}
+
+.table .footer {
+    display: table-footer-group;
+}
+
+.table .row {
+    display: table-row;
+}
+
+.table .row > div {
+    display: table-cell;
+    vertical-align: middle;
+    border: 1px solid #000;
+}
+
+@media only screen and (max-width: 765px) {
+    .table .head,
+    .table .footer {
+        display: none;
+    }
+
+    .table .row {
+        display: block;
+        position: relative;
+        padding: 0 0 5px 0;
+    }
+
+    .table .row > div {
+        display: block;
+    }
+
+    .table .row > .action {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
