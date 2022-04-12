@@ -4,57 +4,59 @@
     margin: 0 auto;
 }
 
-.table.max-res {
+.table {
     width: 100%;
     display: table;
 }
 
-.max-res thead {
+.table .head {
     display: table-header-group;
 }
 
-.max-res tbody {
+.table .body {
     display: table-row-group;
 }
 
-.max-res tfoot {
+.table .footer {
     display: table-footer-group;
 }
 
-.max-res tr {
+.table .row {
     display: table-row;
 }
 
-.max-res tr > th,
-.max-res tr > td {
+.table .row > div,
+.table .row > th,
+.table .row > td {
     display: table-cell;
     vertical-align: middle;
 }
 
-.max-res thead tr > th, .max-res tfoot tr > th,
-.max-res thead tr > td, .max-res tfoot tr > td {
+.table .head .row > div, .table .footer .row > div,
+.table .head .row > th, .table .footer .row > th,
+.table .head .row > td, .table .footer .row > td {
     font-weight: bold;
 }
 
 @media only screen and (max-width: 765px) {
-    .max-res thead,
-    .max-res tfoot {
+    .table .head,
+    .table .footer {
         display: none;
     }
 
-    .max-res tr {
+    .table .row {
         display: block;
         position: relative;
         padding: 0 0 5px 0;
     }
 
-    .max-res tr > div,
-    .max-res tr > th,
-    .max-res tr > td {
+    .table .row > div,
+    .table .row > th,
+    .table .row > td {
         display: block;
     }
 
-    .max-res tr > .action {
+    .table .row > .action {
         position: absolute;
         top: 0;
         right: 0;
